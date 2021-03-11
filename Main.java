@@ -11,8 +11,8 @@ class Main
     for(int i=0;i!=n;i++)//for to print this out
 		{
 			 System.out.println (aliens.createBlurb());//prints this
-		}
+		}//end of for
    
-  }
+  }//end of manin metheid
 
-}
+}//end of Main

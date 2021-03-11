@@ -1,40 +1,44 @@
-import java.util.Random;
-import java.util.Scanner;
-public class Blurbs
+import java.util.Random;//this is to randomize
+import java.util.Scanner;//this is for the scaneer
+public class Blurbs//starts the class
 {
-  public Random rand = new Random();
-  public String createBlurb()
+  public Random rand = new Random();//declares this 
+  public String createBlurb()//creates this method
   {
-    String blurb = createWhoozit ();
-     int num = rand.nextInt(8) + 1;
-     for (int i = 0; i < num; i++)
+    String blurb = createWhoozit ();//calls the other method
+     int num = rand.nextInt(8) + 1;//this is for the random
+     for (int i = 0; i < num; i++)//for loop
         {
-            blurb += createWhatzit();
-        }
-    return blurb;
-  }
-  public String createWhoozit ()
+            blurb += createWhatzit();//calls this method
+        }//end of for
+    return blurb;//return this
+  }//end of createWhozzit
+
+  public String createWhoozit ()//starts this method
   {
-    String whoozit = "x";
-    int num = rand.nextInt(8);
-    while(num-->0)
+    String whoozit = "x";//makes this the start case
+    int num = rand.nextInt(8);//randomizing this
+    while(num>0)//conditions it needs to pass
     {
-      whoozit += "y";
-    }
-    return whoozit;
-  }
-  public String createWhatzit()
+      whoozit += "y";//this is what happens when while passes
+      num--;//takes away this
+    }//end of while
+    return whoozit;//return this 
+  }//end of createWhoozit
+
+  public String createWhatzit()//creates this method
   {
-    String whatzits = "q";
-    int num = rand.nextInt(2);
-    if(num == 0)
+    String whatzits = "q";//sets this to this
+    int num = rand.nextInt(2);//for the random
+    if(num == 0)//test case
     {
-      whatzits += "z";
+      whatzits += "z";//if passes makes it this
     }
-    else{
-      whatzits += "d";
+    else
+    {
+      whatzits += "d";//other makes it this
     }
-    whatzits += createWhoozit();
-    return whatzits;
-  }
-}
+    whatzits += createWhoozit();//when called returns this
+    return whatzits;//returns this
+  }//end of createWatzit
+}//end of Blurbs
